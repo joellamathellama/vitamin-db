@@ -2,9 +2,9 @@ const gulp       = require('gulp');
 const uglify     = require('gulp-uglify');
 const browserify = require('browserify');
 const source     = require('vinyl-source-stream');
-const buff     = require('vinyl-buffer');
+const buff       = require('vinyl-buffer');
 const babelify   = require('babelify');
-//const lint       = require('gulp-eslint')
+
 // Shortcuts
 const config = {
   paths: {
@@ -16,7 +16,8 @@ const config = {
     appJs: './client/app.js'
   }
 }
-// Copy & pastes index.html into the dist folder
+
+// "Copy & pastes" index.html into the dist folder
 gulp.task('html', function(){
   gulp.src(config.paths.html)
     .on('error', console.error.bind(console))
