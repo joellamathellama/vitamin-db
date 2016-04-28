@@ -50,8 +50,6 @@ gulp.task('js', function(){
     .bundle()
     .on('error', console.error.bind(console))
     .pipe(source('app-bundle.js'))
-    .pipe(buff())
-    .pipe(uglify())
     .pipe(gulp.dest(config.paths.dist + '/scripts'))
 })
 // Rebundle on .js & .html changes
